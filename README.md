@@ -1,16 +1,18 @@
-# Claude 3.5 Sonnet in Copilot chat
+# Claude 3.5 Sonnet in Copilot Chat
 
-Add _Claude 3.5 Sonnet_, _DeepSeekCoder v2_ and _Gpt4o_ to your Copilot chat window using your own API keys (BYOK).
+Add **Claude 3.5 Sonnet** and other models to your GitHub Copilot chat.
+
+![](https://multicoder.dev/resources/readme/overview.gif)
+
+Multicoder extends Copilot chat with additional models, available as _chat participants_. Type the **@** symbol and select the model you want to use.
 
 ![](https://multicoder.dev/resources/readme/participants.png)
 
-Select _@claude_ or other models (which are added to copilot chat as _chat participants_), then talk to them the same way as the default model.
-
-![](https://multicoder.dev/resources/readme/using.png)
+These additional models are not provided by the GitHub Copilot service. To enable them, you need to create an account on the provider's website and generate your own API key.
 
 ## Setup
 
-Start your first session with /config command:
+Start your first session with the /config command:
 
 ```
 @claude /config
@@ -18,4 +20,39 @@ Start your first session with /config command:
 
 ![](https://multicoder.dev/resources/readme/config.png)
 
-Then set the API key using `Set API key` button.
+Visit the provider's website, create an account for API use, and generate your own API key. Then, assign your key to the model using the `Set API key` button.
+
+## Features
+
+![](https://multicoder.dev/resources/readme/using.png)
+
+### On-demand Context
+
+This extension allows models to **read files and directories** in your current workspace (except those excluded by .gitignore). You don't always need to manually insert your code into the request context; in many cases, the model will automatically determine which files are required.
+
+**ATTENTION!** Do not use this extension if you don't want your code fragments to be sent to the model provider's server.
+
+Multicoder adds the following context to the initial request:
+
+- A list of files and folders in the project root
+- Names of open files in the current workspace
+- Name of the file in the active editor
+- Selected text in the active editor
+
+### Apply/Undo Changes
+
+To apply code changes to your original files, click the **Apply** button. Click again to revert the changes.
+
+### Diff View
+
+You can open the diff view by clicking on the blue link just above the code block. The diff combines all changes per file in this conversation.
+
+## Feedback
+
+This extension is in early development. Please raise an issue if something doesn't work as expected:
+
+- [https://github.com/multicoder-ai/vscode-release/issues](https://github.com/multicoder-ai/vscode-release/issues)
+
+Questions or suggestions? Visit:
+
+- [https://github.com/multicoder-ai/vscode-release/discussions](https://github.com/multicoder-ai/vscode-release/discussions)
