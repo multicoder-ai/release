@@ -56,3 +56,9 @@ This extension is in early development. Please raise an issue if something doesn
 Questions or suggestions? Visit:
 
 - [https://github.com/multicoder-ai/vscode-release/discussions](https://github.com/multicoder-ai/vscode-release/discussions)
+
+## Download
+
+The extension is available on VSCode Marketplace -
+
+- [Download VS Code extension](https://marketplace.visualstudio.com/items?itemName=multicoder.multicoder)
